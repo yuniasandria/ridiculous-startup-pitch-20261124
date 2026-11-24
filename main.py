@@ -1,6 +1,10 @@
 import os
 
-SENTENCE = "We lease trained seagulls to landlords losing the war on pigeons, because one territorial gull clears a roof faster and cheaper than netting or poison."
+PART_A = "We lease trained seagulls to landlords losing the war on pigeons, "
+PART_B = "because one territorial gull clears a roof faster and cheaper than netting or poison."
+SENTENCE = PART_A + PART_B
+assert SENTENCE == "We lease trained seagulls to landlords losing the war on pigeons, because one territorial gull clears a roof faster and cheaper than netting or poison."
+assert 1 <= len(SENTENCE) <= 200
 
 def main():
     out_dir = os.environ.get("OUTPUT_DIR", "/output")
